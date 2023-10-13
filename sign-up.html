@@ -1,0 +1,32 @@
+<div class="mx-auto flex min-h-screen w-[85%] animate-reveal flex-col items-center pb-10"><h1 class="page-heading">Create an account</h1><div class="card w-full max-w-xl">
+    <form class="grid h-3/4 grid-cols-1 gap-4" method="post" autocomplete="off" id="signup-form" name="SignUpForm"><div class="flex h-[52px] w-full items-center rounded-md border border-black/30 bg-white p-2 outline-none dark:border-white/30 dark:bg-black/50"><input class="ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-black outline-none dark:text-white lg:text-xl" required="" placeholder="Enter Your Name" type="text" value="" /><span class="material-symbols-outlined mx-1 flex cursor-pointer items-center justify-center text-black dark:text-white md:text-3xl">person</span></div><div class="flex h-[52px] w-full items-center rounded-md border border-black/30 bg-white p-2 outline-none dark:border-white/30 dark:bg-black/50"><input class="ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-black outline-none dark:text-white lg:text-xl" required="" placeholder="Enter Email ID" type="email" value="" id="email" /><span class="material-symbols-outlined mx-1 flex cursor-pointer items-center justify-center text-black dark:text-white md:text-3xl">mail</span></div><div class="flex h-[52px] w-full items-center rounded-md border border-black/30 bg-white p-2 outline-none dark:border-white/30 dark:bg-black/50"><input required="" class="ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-black outline-none dark:text-white lg:text-xl" placeholder="Enter Password" type="password" value="" id="password"/><button class="material-symbols-outlined mx-1 flex cursor-pointer items-center justify-center text-black dark:text-white md:text-3xl" type="button">visibility</button></div><div class="flex h-[52px] w-full items-center rounded-md border border-black/30 bg-white p-2 outline-none dark:border-white/30 dark:bg-black/50"><input class="ml-1 w-full rounded-lg border-none bg-transparent font-medium tracking-wide text-black outline-none dark:text-white lg:text-xl" required="" placeholder="Confirm Password" type="password" value="" /><span class="material-symbols-outlined mx-1 flex cursor-pointer items-center justify-center text-black dark:text-white md:text-3xl">lock</span></div><label class="mx-auto my-2 flex items-center justify-center text-sm font-medium tracking-wide text-black dark:text-white sm:text-base"><input class="mr-4 h-5 w-5 cursor-pointer accent-primary" type="checkbox" required="" value="" /><span class="w-full select-none text-black dark:text-white">I agree to the Terms &amp; Conditions</span></label><button class="fill-button mt-2" type="submit" id="register" name="signup">Sign Up</button><div class="-mt-1 text-center text-sm font-medium tracking-wide text-black dark:text-slate-300 md:text-base">Already have an account? <span class="inline-block"><a href="/login.html"><span class="link-text">Login</span></a> instead.</span></div></form></div><div class="mx-auto w-full max-w-xl"><div><div class="my-5 inline-flex w-full items-center justify-center"><p class="h-px w-full bg-secondary"></p><p class="mx-5">Or</p><p class="h-px w-full bg-secondary"></p></div><button class="flex w-full items-center justify-center rounded-lg border-2 border-amber-500 bg-white px-4 py-3 text-2xl font-bold uppercase tracking-wider text-black transition-all duration-300 ease-in-out hover:bg-gray-200 dark:bg-black dark:text-white dark:hover:bg-gray-800" type="button"><img alt="" class="mr-4 h-8 w-8" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />Sign Up</button></div></div></div><div style="position: fixed; z-index: 9999; inset: 16px; pointer-events: none;"></div></div></div>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script src="firebase.js"></script>
+
+    <script>
+        function handleSignUp(e) {
+            e.preventDefault();
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then(function(userCredential) {
+                    var user = userCredential.user;
+                    alert('Sign-up successful!');
+                    window.location.replace("index.html"); // Redirect to main page
+                })
+                .catch(function(error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    alert('Sign-up failed: ' + errorMessage);
+                });
+        }
+
+        // Initialize Firebase and add your configuration here
+
+        document.getElementById('register').addEventListener('click', handleSignUp, false);
+    </script>
+    
+  <link rel="stylesheet" href="./css/style.css">

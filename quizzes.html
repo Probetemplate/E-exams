@@ -1,0 +1,337 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="src/css/materialize.min.css">
+	<link rel="stylesheet" href="src/css/material-icons.css">
+	<link rel="stylesheet" href="src/css/index.css">
+	
+	<link rel="icon" href="images/logo64x64.png">
+	<link rel="manifest" href="manifest.json">
+
+	<meta name="title" content="Quizzes Online">
+	<meta name="description" content="SMG a web based quize app?">
+	<meta name="keywords" content="quiz,quizzes,quizes,smg,Online,lucas naja,javascript,app,quizzes,quizezer">
+	<meta name="author" content="SMG">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Quizzes Online">
+	<meta name="apple-mobile-web-app-title" content="Quizzes Online">
+	<meta name="theme-color" content="#00897b">
+	<meta name="msapplication-navbutton-color" content="#00897b">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="msapplication-starturl" content="">
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="Quizzes Online">
+	<meta property="og:description" content="Quizzes Online com várias modalidades de perguntas. Quantas você consegue acertar?">
+	<meta property="og:image" content="htpps://smg.io/images/dark_theme.png">
+	<meta property="og:image:alt" content="Quizzes Online com várias modalidades de perguntas. Quantas você consegue acertar?">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="htpps://smg.io">
+	<meta name="twitter:title" content="Quizzes Online">
+	<meta name="twitter:description" content="Quizzes Online com várias modalidades de perguntas. Quantas você consegue acertar?">
+	<meta name="twitter:image" content="htpps://smg.io/images/dark_theme.png">
+	<meta name="twitter:image:alt" content="Quizzes Online com várias modalidades de perguntas. Quantas você consegue acertar?">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:site" content="@mohammadalamin2k23">
+	<!-- Robots -->
+	<meta name="robots" content="index,follow,noodp">
+	<meta name="robots" content="noydir">
+	<meta name="slurp" content="noydir">
+
+	<title>Quizzes Online - </title>
+</head>
+
+<body data-theme="light">
+	<noscript>
+		<link rel="stylesheet" href="src/css/error.css">
+		<p>Ative o JavaScript.</p>
+	</noscript>
+
+	<div id="preloader">
+		<div class="preloader-wrapper big active">
+			<div class="spinner-layer">
+				<div class="circle-clipper left">
+					<div class="circle"></div>
+				</div>
+				<div class="gap-patch">
+					<div class="circle"></div>
+				</div>
+				<div class="circle-clipper right">
+					<div class="circle"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="navbar-fixed" style="display:none;">
+	    
+		<nav id="nav" class="hide">
+			<div class="nav-wrapper">
+				<a id="logo" class="brand-logo center hide-on-med-and-down">SMG | Quizzes Online</a>
+				<a id="logoMobile" class="brand-logo left hide-on-large-only">SMG | Quizzes Online</a>
+				<a id="navMenu" data-target="slide-out" class="sidenav-trigger right c-pt"><i class="material-icons">menu</i></a>
+
+				<ul id="nav-mobile" class="hide-on-med-and-down">
+					<li><a title="Início" href="./" class="bgcoloractive">Home<i class="material-icons left">home</i></a></li>
+					<li><a title="Sobre" href="sobre/">Info<i class="material-icons left">info</i></a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	<ul id="slide-out" class="sidenav">
+		<li>
+			<div class="user-view">
+				<img class="circle" style="border-radius:0" src="images/logo128x128.png">
+				<span class="name">Quizzes Online</span>
+				<span class="email">Project SMG</span>
+			</div>
+		</li>
+		<div class="divider bgcolor"></div>
+		<li class="active"><a href="./" class="waves-effect text"><i class="material-icons left teal-text">home</i>Home</a></li>
+		<li><a href="sobre/" class="waves-effect text"><i class="material-icons left blue-text">info</i>Info</a></li>
+		<li><a href="login.html" class="waves-effect text"><i class="material-icons left green-text">dashboard</i>Login</a></li>
+		<li><a href="/" target="_target" rel="noopener noreferrer nofollow" class="waves-effect text"><i class="material-icons left text">code</i>Code</a></li>
+		<div class="divider bgcolor" style="margin-top:0"></div>
+		<li>
+			<ul class="collapsible">
+				<li>
+					<div class="collapsible-header"><i class="material-icons left grey-text">settings</i>Settings<i class="material-icons" style="position:absolute;right: 0">arrow_drop_down</i></div>
+					<div class="collapsible-body background-2">
+						<ul>
+							<div class="divider bgcolor" style="margin-top:0"></div>
+							<li><a class="waves-effect modal-trigger text" data-target="modal7"><i class="material-icons left red-text">clear</i>Ranking</a></li>
+							<li><a class="waves-effect modal-trigger text" data-target="modal8"><i class="material-icons left text">invert_colors</i>Invert colors</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<div class="divider bgcolor" style="margin-top:0"></div>
+	</ul>
+
+	<section id="container" class="container hide" style="margin-bottom:14px">
+		<section id="selectQuiz" class="card-panel z-depth-2" style="margin-top:14px">
+			<h5 style="margin:-20px 0 0" class="corTexto"><i class="material-icons" style="top:11px;font-size:37px">list</i>List of Quizzes</h5>
+			<div class="divider" style="background-color:#9e9e9e;margin-top:6px"></div>
+
+			<div id="options" class="row" style="margin-bottom:0"></div>
+		</section>
+
+		<section id="quiz" class="card-panel z-depth-2 hide" style="margin-top:14px"></section>
+
+		<button id="rank" title="Ranking Local" class="btn waves-effect modal-trigger waves-teal" data-target="modal4"><i class="material-icons left">format_line_spacing</i>Ranking</button>
+		<button id="start" title="Iniciar Quiz" class="btn waves-effect waves-teal right" onclick="start()">START<i class="material-icons right">chevron_right</i></button>
+		<button id="giveUp" title="Desistir do Quiz" class="btn waves-effect waves-red modal-trigger red hide" data-target="modal1"><i class="material-icons left">sentiment_very_dissatisfied</i>Give up</button>
+		<button id="next" title="Próxima Pergunta" class="btn waves-effect waves-teal right hide" onclick="next()">Next<i class="material-icons right">chevron_right</i></button>
+		<button id="finish" title="Voltar aos Quizzes" class="btn waves-effect waves-teal hide" onclick="stop()"><i class="material-icons left">chevron_left</i>Finish</button>
+		<button id="save" title="Save Resultado" class="btn waves-effect waves-teal modal-trigger green hide" data-target="modal5">Save<i class="material-icons left">save</i></button>
+		<button id="showAnswers" title="Ver Respostas" class="btn waves-effect waves-teal right modal-trigger hide" data-target="modal3">Show Answer<i class="material-icons right">question_answer</i></button>
+	</section>
+
+	<ul class="pagination center hide" id="pagination"> </ul>
+
+	<section id="actionButton" class="fixed-action-btn">
+		<a id="menu" class="btn-floating btn-large waves-effect waves-teal"><i class="material-icons">more_vert</i></a>
+		<ul>
+			<li><a class="btn-floating modal-trigger waves-effect waves-red red" data-target="modal7"><i class="material-icons">clear</i></a></li>
+			<li><a class="btn-floating waves-effect waves-teal" href="https://github.com/LucasNaja/quizzes-online" target="_target" rel="noopener noreferrer nofollow"><i class="material-icons">code</i></a></li>
+			<li><a class="btn-floating modal-trigger waves-effect waves-teal" data-target="modal8"><i class="material-icons">invert_colors</i></a></li>
+		</ul>
+	</section>
+
+	<section id="modal1" class="modal modal-95">
+		<div class="modal-content">
+			<h4><i class="material-icons red-text" style="top:1px">sentiment_very_dissatisfied</i> Give up</h4>
+			<p style="font-size:16px;margin:0">Verry dissatisfied 😭😭</p>
+		</div>
+
+		<div class="divider"></div>
+		<div class="modal-footer">
+			<button title="Cancelar" class="btn modal-close waves-effect waves-teal"><i class="material-icons left">arrow_back</i>Cancel</button>&nbsp;
+			<button title="Desistir do Quiz" class="btn modal-close waves-effect waves-red red" onclick="stop()">Exit<i class="material-icons right">sentiment_very_dissatisfied</i></button>
+		</div>
+	</section>
+
+	<section id="modal2" class="modal modal-95">
+		<div class="modal-content">
+			<h4><i class="material-icons" id="star">star</i> Finish Quiz</h4>
+			<p style="font-size:16px;margin:0">Your <span id="points"></span></p>
+		</div>
+
+		<div class="divider"></div>
+		<div class="modal-footer">
+			<button title="Close" class="btn modal-close waves-effect waves-teal"><i class="material-icons left">close</i>Close</button>
+		</div>
+	</section>
+
+	<section id="modal3" class="modal modal-95 modal-fixed-footer">
+		<div id="answers" class="modal-content"> </div>
+
+		<div class="divider"></div>
+		<div class="modal-footer">
+			<button title="Close" class="btn modal-close waves-effect waves-teal"><i class="material-icons left">close</i>Close</button>
+		</div>
+	</section>
+
+	<section id="modal4" class="modal modal-100 modal-fixed-footer">
+		<div class="modal-content">
+			<ul id="tabs" class="tabs z-depth-1"> </ul>
+
+			<div id="tabItems"></div>
+		</div>
+
+		<div class="modal-footer">
+			<button title="Close" class="modal-close waves-effect waves-teal btn"><i class="material-icons left">close</i>Close</button>
+		</div>
+	</section>
+
+	<section id="modal5" class="modal modal-95">
+		<div class="modal-content">
+			<h4><i class="material-icons" style="top:1px">save</i> Save</h4>
+			<p>Quiz: <span id="quizSave"></span></p>
+			<p>Points: <span id="hitsSave"></span></p>
+			<p>Time: <span id="timeSave"></span></p>
+
+			<div class="input-field" style="margin:25px 0 0 0">
+				<input placeholder="Name" id="name" type="text" minlength=3 class="validate">
+				<label for="name">Type your name</label>
+			</div>
+		</div>
+
+		<div class="divider"></div>
+		<div class="modal-footer">
+			<button title="Cancelar" class="modal-close waves-effect waves-teal btn"><i class="material-icons left">arrow_back</i>Back</button>&nbsp;
+			<button id="btnSave" title="Save resultado" class="waves-effect waves-green btn green" onclick="save();renderSavedItems()">Save<i class="material-icons right">save</i></button>
+		</div>
+	</section>
+
+	<section id="modal6" class="modal modal-95">
+		<div class="modal-content">
+			<h4><i class="material-icons red-text" style="top:1px">sentiment_dissatisfied</i>Dissatisfied!</h4>
+			<p style="font-size:16px;margin:0">This is a term of tension!</p>
+		</div>
+
+		<div class="divider"></div>
+		<div class="modal-footer">
+			<button title="Close" class="modal-close waves-effect waves-teal btn">Close<i class="material-icons left">close</i></button>
+		</div>
+	</section>
+
+	<section id="modal7" class="modal modal-95">
+		<div class="modal-content">
+			<h4><i class="material-icons left red-text" style="top:6px;margin-right:5px">clear</i>Ranking</h4>
+
+			<p style="font-size:16px;margin:0">Want's to delete your ranking?</p>
+		</div>
+
+		<div class="divider"></div>
+		<div class="modal-footer">
+			<button title="Cancelar" class="modal-close waves-effect waves-teal btn"><i class="material-icons left">arrow_back</i>Cancel</button>&nbsp;
+			<button title="Limpar Ranking" class="modal-close waves-effect waves-red btn red" onclick="clearSavedItems()">Delete <i class="material-icons right">clear</i></button>
+		</div>
+	</section>
+
+	<section id="modal8" class="modal modal-95">
+		<div class="modal-content">
+			<h4><i class="material-icons left" style="top:6px;margin:0 5px 0 0">invert_colors</i>Invert color</h4>
+
+			<div class="switch">
+				<label>
+					<input id="darktheme" type="checkbox" onchange="if (this.checked) darkTheme(); else lightTheme()">
+					<span class="lever"></span>
+					<span class="text"> Dark Theme</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="divider"></div>
+		<div class="modal-footer">
+			<button title="Close" class="modal-close waves-effect waves-teal btn"><i class="material-icons left">close</i>Close</button>
+		</div>
+	</section>
+
+	<section id="modal9" class="modal modal-95">
+		<div class="modal-content">
+			<h4><i class="material-icons left teal-text" style="top:7px;margin:0 5px 0 0">help</i><span id="quizName"></span></h4>
+
+			<p id="quizInformation" style="font-size:16px;margin:0"></p>
+		</div>
+
+		<div class="divider"></div>
+		<div class="modal-footer">
+			<button title="Close" class="modal-close waves-effect waves-teal btn"><i class="material-icons left">close</i>Close</button>
+		</div>
+	</section>
+
+	<script src="src/js/materialize.min.js"></script>
+	<script src="src/js/questions.js"></script>
+	<script src="src/js/index.js"></script>
+	
+	
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/service-worker.js')
+		}
+	</script>
+	<button class="waves-effect waves-green btn green" type="button" onclick="mainApp.logOut();">Log Out</button>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+<script src="firebase.js"></script>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $("#search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#posts *").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    var mainApp = {};
+(function() {
+    var firebase = app_firebase;
+var uid = null;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    uid = user.uid;
+  }else {
+      window.location.replace("sign-in.html");
+  }
+});
+function logOut(){
+        firebase.auth().signOut();
+    }
+    mainApp.logOut = logOut;
+})()
+    </script>
+    
+    
+    
+
+
+<!-- Site Plugins -->
+
+<!-- Site Scripts -->
+
+</body>
+</html>
+
+
+	
+
+

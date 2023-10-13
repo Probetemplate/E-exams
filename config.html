@@ -1,0 +1,69 @@
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+<script src="firebase.js"></script>
+</head>
+            
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <a class="navbar-brand" href="#">SMG <small class="bg-transparent">Shines Like a bright star</small></a>
+        <div class="collapse navbar-collapse" id="navbar">
+          
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search">
+            
+            
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick="mainApp.logOut();">Log Out</button>
+          </form>
+        </div>
+      </nav>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $("#search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#posts *").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    var mainApp = {};
+(function() {
+    var firebase = app_firebase;
+var uid = null;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    uid = user.uid;
+  }else {
+      window.location.replace("login.html");
+  }
+});
+function logOut(){
+        firebase.auth().signOut();
+    }
+    mainApp.logOut = logOut;
+})()
+    </script>
+    
+    
+    
+
+
+<!-- Site Plugins -->
+
+<!-- Site Scripts -->
+
+</body>
+</html>
+
